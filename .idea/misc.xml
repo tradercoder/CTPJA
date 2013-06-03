@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="EntryPointsManager">
-    <entry_points version="2.0" />
-  </component>
-  <component name="IdProvider" IDEtalkID="D9A63CF6EFC011582F49FE84AED68B99" />
+  <component name="IdProvider" IDEtalkID="EC9CED64EF2817AF05B4690F70E60930" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -12,7 +9,7 @@
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/classes" />
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="SvnBranchConfigurationManager">
     <option name="mySupportsUserInfoFilter" value="true" />
