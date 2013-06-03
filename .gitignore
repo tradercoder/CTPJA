@@ -1,5 +1,9 @@
 *.class
 .svn/
+classes/
+generated-sources/
+generated-test-sources/
+test-classes/
 
 # Package Files #
 #*.jar
