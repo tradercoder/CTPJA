@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="bridj">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/asm-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/bridj-0.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.osgi.core-4.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/org.osgi.core-4.1.0.jar!/OSGI-OPT/src" />
+    </SOURCES>
+  </library>
+</component>
