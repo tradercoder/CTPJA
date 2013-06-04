@@ -6,6 +6,7 @@ import thosttraderapi.CThostFtdcTraderApi;
 import thosttraderapi.CThostFtdcTraderSpi;
 
 /**
+ * Copyright (c) 2011-2013, z16304607@163.com 
  * Created with IntelliJ IDEA.
  * User: trade
  * Date: 13-5-16

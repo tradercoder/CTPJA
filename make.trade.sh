@@ -13,4 +13,5 @@ $JAVA_HOME/bin/java -Xmx512M -Dbridj.verbose=true -classpath $JRE_HOME/lib/jsse.
 
 cd ..
 cd ..
+rm -rf target/classes
 
