@@ -9,7 +9,7 @@ import thosttraderapi.*;
 
 
 /**
- * Copyright (c) 2011-2013, z16304607@163.com 
+ * Copyright (c) 2011-2013, z16304607@163.com
  * Created with IntelliJ IDEA.
  * User: trade
  * Date: 13-5-16
@@ -120,6 +120,14 @@ public class TestTradeSpi extends CThostFtdcTraderSpi
         req.setInvestorID( this.m_userID ) ;
 
         this.m_api.ReqSettlementInfoConfirm( Pointer.pointerTo( req ) , 1 ) ;
+
+        /**
+         * 测试接口，仅此而已
+         */
+        CThostFtdcQrySettlementInfoField info = new CThostFtdcQrySettlementInfoField( ) ;
+        info.BrokerID( ).setCString( this.m_brokerID ) ;
+        info.InvestorID( ).setCString( this.m_userID ) ;
+        this.m_api.ReqQrySettlementInfo( Pointer.pointerTo( info ) , 3 ) ;
     }
 
     /**
@@ -378,8 +386,9 @@ public class TestTradeSpi extends CThostFtdcTraderSpi
      * <i>native declaration : ctpapi/linux/ThostFtdcTraderApi.h:111</i>
      */
     @Virtual(27)
-    public void OnRspQrySettlementInfo(Pointer<CThostFtdcSettlementInfoField > pSettlementInfo, Pointer<CThostFtdcRspInfoField > pRspInfo, int nRequestID, boolean bIsLast) {
-
+    public void OnRspQrySettlementInfo(Pointer<CThostFtdcSettlementInfoField > pSettlementInfo, Pointer<CThostFtdcRspInfoField > pRspInfo, int nRequestID, boolean bIsLast)
+    {
+        System.out.println( "TestTradeSpi OnRspQrySettlementInfo" ) ;
     }
 
     /**
