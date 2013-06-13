@@ -1,0 +1,5 @@
+
+OS:	linux 64 bit
+JDK：	JDK7
+
+
