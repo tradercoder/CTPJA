@@ -40,7 +40,9 @@ public class TestTrade
 
         ftdcTraderApi.RegisterSpi( Pointer.pointerTo( tradeSpi ) ) ;
 
-        ftdcTraderApi.RegisterFront( Pointer.pointerToCString( "tcp://sim-front1.ctp.shcifco.com:31205" ) );
+        ftdcTraderApi.RegisterFront( Pointer.pointerToCString( "tcp://222.66.235.70:61205" ) );                 // 申万期货
+        //ftdcTraderApi.RegisterFront( Pointer.pointerToCString( "tcp://183.129.188.37:41205" ) );              // 中大期货
+        //ftdcTraderApi.RegisterFront( Pointer.pointerToCString( "tcp://sim-front1.ctp.shcifco.com:31205" ) );  // 上海中期
         ftdcTraderApi.Init();
 
         ftdcTraderApi.Join( ) ;

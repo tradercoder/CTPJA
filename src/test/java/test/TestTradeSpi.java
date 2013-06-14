@@ -18,8 +18,12 @@ import thosttraderapi.*;
  */
 public class TestTradeSpi extends CThostFtdcTraderSpi
 {
-    private String m_brokerID = "1002" ;
-    private String m_userID = "00000063" ;
+    private String m_brokerID = "1026" ;        // 申万期货
+    private String m_userID = "00000023" ;
+    //private String m_brokerID = "1019" ;
+    //private String m_userID = "00000080" ;    // 中大期货
+    //private String m_brokerID = "1002" ;
+    //private String m_userID = "00000063" ;    // 上海中期
     private String m_password = "123456" ;
     private String m_testInstrumentID = "IF1306" ;
     private double m_testLimitPrice = 2569.40 ;
@@ -115,19 +119,55 @@ public class TestTradeSpi extends CThostFtdcTraderSpi
         /**
          * 投资者结算结果确认
          */
-        CThostFtdcSettlementInfoConfirmField req = new CThostFtdcSettlementInfoConfirmField( ) ;
+        /*CThostFtdcSettlementInfoConfirmField req = new CThostFtdcSettlementInfoConfirmField( ) ;
         req.setBrokerID( this.m_brokerID ) ;
         req.setInvestorID( this.m_userID ) ;
 
         this.m_api.ReqSettlementInfoConfirm( Pointer.pointerTo( req ) , 1 ) ;
 
+        try
+        {
+            Thread.sleep( 1000 ) ;
+        }
+        catch( Exception e )
+        {
+            System.out.println( e ) ;
+        }*/
+
         /**
          * 测试接口，仅此而已
          */
-        CThostFtdcQrySettlementInfoField info = new CThostFtdcQrySettlementInfoField( ) ;
+        /*CThostFtdcQrySettlementInfoField info = new CThostFtdcQrySettlementInfoField( ) ;
         info.BrokerID( ).setCString( this.m_brokerID ) ;
         info.InvestorID( ).setCString( this.m_userID ) ;
         this.m_api.ReqQrySettlementInfo( Pointer.pointerTo( info ) , 3 ) ;
+
+        try
+        {
+            Thread.sleep( 1000 ) ;
+        }
+        catch( Exception e )
+        {
+            System.out.println( e ) ;
+        }*/
+
+        /**
+         * 测试接口，仅此而已
+         */
+        CThostFtdcQryTradingAccountField account = new CThostFtdcQryTradingAccountField( ) ;
+        account.BrokerID( ).setCString( this.m_brokerID ) ;
+        account.InvestorID( ).setCString( this.m_userID ) ;
+        int ncoder = this.m_api.ReqQryTradingAccount( Pointer.pointerTo( account ) , 4 ) ;
+
+        try
+        {
+            Thread.sleep( 1000 ) ;
+        }
+        catch( Exception e )
+        {
+            System.out.println( e ) ;
+        }
+
     }
 
     /**
@@ -307,7 +347,7 @@ public class TestTradeSpi extends CThostFtdcTraderSpi
      */
     @Virtual(19)
     public void OnRspQryTradingAccount(Pointer<CThostFtdcTradingAccountField > pTradingAccount, Pointer<CThostFtdcRspInfoField > pRspInfo, int nRequestID, boolean bIsLast) {
-
+        System.out.println( "TestTradeSpi OnRspQryTradingAccount" );
     }
 
     /**
