@@ -35,5 +35,6 @@ CTP Java Adapter . for quote datafeed and trade .
 
 技术支持：
 	z16304607@163.com
-
+	http://blog.sina.com.cn/hfttrade
+	http://blog.sina.com.cn/s/articlelist_2321482330_8_1.html
 
